@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 style="color:brown">Products List</h1>
+
+&thinsp;&thinsp;<b style="color:red"> Product Id &emsp; Product Title</b> <hr>
+
+{% for instances in object_list %}
+<p> &emsp;&nbsp;{{instances.id}}: &emsp;&emsp;&emsp;&emsp;<a href="{{ instances.get_absolute_url }}" style="text-decoration: none"> {{instances.title}} </a></p>
+{% endfor %}
+
+<br>
+<p>** click on 'Product Title' for more details</p>
+
+{% endblock %}
