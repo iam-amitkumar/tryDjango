@@ -1,0 +1,24 @@
+{% extends "base.html"%}
+
+{% block content %}
+<CENTER>
+    <h1>About Page</h1>
+</CENTER>
+<p>
+    Name : {{name}} <br>
+    Technology : {{technology}} <br>
+    Company : {{company}} <br>
+    Contact : {{contact}} <br>
+    List : {{list1}}
+</p>
+<ul>
+    {% for sub_list in list1 %}
+        {% if sub_list == 12 %}
+            <li>{{forloop.counter}}. {{sub_list | add:"20"}}</li>
+        {% else %}
+            <li>{{forloop.counter}}. {{sub_list}}</li>
+        {% endif %}
+    {%endfor%}
+</ul>
+
+{% endblock %}

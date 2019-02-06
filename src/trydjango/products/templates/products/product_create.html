@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 style="text-decoration:underline">Form Content</h2>
+<form action="." method="POST"> {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Save" style="background:green; color:white"/>
+    <input type="button" value="Cancel" onclick="window.location.href='../'" style="background:red; color:white"/>
+</form>
+
+{% endblock %}

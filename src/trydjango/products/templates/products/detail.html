@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Product Details</h2>
+<b>Title</b> : {{object.title}}<br>
+<b>e-mail</b> : {{object.email}}<br>
+<b>Featured</b> : {{object.featured}} <br>
+<b>Description</b> : {{object.description}} <br>
+<b>Summary</b> : {{object.summary}}
+<br><br>
+<input type="button" value="Delete Product" onclick="window.location.href='delete/'" style="background:red; color:white"/>
+<br>
+<input type="button" value="Go Back" onclick="window.location.href='../'" style="background:blue; color:white"/>
+<!--<p><a href="delete/" style="text-decoration:none; color:red"><< Delete this Product >></a></p>-->
+<!--<p><a href="../" style="text-decoration:none; color:blue"><< Go Back</a> </p>-->
+
+
+{% endblock %}
